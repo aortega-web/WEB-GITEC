@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GITEC - Arquitectura Tècnica</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'gitec-blue': '#1D3557', // Dark Blue
+            'gitec-lightblue': '#A8DADC', // Light Blue / Tealish
+            'gitec-cream': '#F1FAEE', // Cream / Off-white
+            'gitec-red': '#E63946', // Accent Red
+            'gitec-gray': {
+              DEFAULT: '#457B9D', // Medium Blue/Gray
+              light: '#8D99AE',
+              dark: '#2B2D42'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'], // Example modern font
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Custom scrollbar for a more modern look (optional) */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #A8DADC; /* gitec-lightblue */
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #457B9D; /* gitec-gray */
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Roboto Slab', serif;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "react/": "https://esm.sh/react@18.2.0/"
+  }
+}
+</script>
+<!-- Babel per traduir TSX a JS al navegador -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gitec-cream text-gitec-gray-dark">
+  <div id="root"></div>
+  <!-- Canviem el tipus de script perquè Babel el pugui processar -->
+  <script type="text/babel" data-type="module" src="/index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
